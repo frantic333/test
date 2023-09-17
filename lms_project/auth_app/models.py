@@ -10,7 +10,7 @@ class User(AbstractUser):
     avatar = models.ImageField(verbose_name='Фото', blank=True, upload_to=get_timestamp_path_user)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
 
     class Meta:
         verbose_name_plural = 'Участники'
